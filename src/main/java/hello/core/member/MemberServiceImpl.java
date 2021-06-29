@@ -11,7 +11,6 @@ public class MemberServiceImpl implements MemberService {
     //3) 생성자형성 (생성자주입)
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository; //AppConfig로부터 MemoryMemberRepository를 받아서 할당시켜줌
-
     }
 
     @Override

@@ -14,7 +14,7 @@ public class MemberApp {
 //        MemberService memberService = appConfig.memberService();
 // 스프링커밋!
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        // 스프링의 시작 , 모든 Bean을 관리해줌 ,
+        // 스프링의 시작 , 모든 Bean을 관리해줌 , 
         // new AnnotationConfigApplicationContext(AppConfig.class) 은 @Bean이 붙은것들의 객체들을 스프링빈(컨테이너)에 저장후 관리
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
         Member member = new Member(1L, "memberA", Grade.VIP);
