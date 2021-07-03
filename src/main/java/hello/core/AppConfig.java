@@ -17,16 +17,19 @@ public class AppConfig {//나의 애플리케이션의 전반적인 구성과 �
 
     @Bean // @Bean으로 인하여 스프링 컨테이너에 소속됨
     public MemberService memberService(){ // memberService = Key
+        System.out.println("Call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository()); // 객체 = Value
     }//MemberServiceImpl을 쓸지말지 제어권한은 AppConfig에게 있다. OrderServiceImpl도 마찬가지!
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("Call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService(){ // 오더서비스에 저장소와 할인정책을 주입시켜준다.
+        System.out.println("Call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
