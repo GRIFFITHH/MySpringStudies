@@ -12,6 +12,8 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+// 7월4일 기존의 AppConfig
 @Configuration
 public class AppConfig {//나의 애플리케이션의 전반적인 구성과 설정을 책임!
 

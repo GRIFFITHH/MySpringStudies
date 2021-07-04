@@ -6,7 +6,10 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
     //회원정보를 가져오기위해 객체 선언
     private final MemberRepository memberRepository;// = new MemoryMemberRepository();
@@ -22,7 +25,7 @@ public class OrderServiceImpl implements OrderService {
     //하지만 이상태로 돌리면 null point exeption ,discountPolicy 에 할당된값이 없기때문! (DIP만 지키는 상태)
 
 
-
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;

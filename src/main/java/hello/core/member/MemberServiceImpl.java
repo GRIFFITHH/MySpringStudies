@@ -1,5 +1,9 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component//컴포넌트 스캔으로 자동으로 빈에 등록하면 의존관계를 주입할 방법이 없기때문에 Autowired로 의존관계 주입
 public class MemberServiceImpl implements MemberService {
     //구현체가 하나밖에 없을경우 Impl을 붙이는게 관례
     private final MemberRepository memberRepository;
@@ -9,6 +13,7 @@ public class MemberServiceImpl implements MemberService {
     //final은 왜 붙였지? final은 상속못시키는데, 다시한번 내용 공부하자
 
     //3) 생성자형성 (생성자주입)
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository; //AppConfig로부터 MemoryMemberRepository를 받아서 할당시켜줌
     }
