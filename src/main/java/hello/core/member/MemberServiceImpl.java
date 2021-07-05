@@ -3,7 +3,7 @@ package hello.core.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component//컴포넌트 스캔으로 자동으로 빈에 등록하면 의존관계를 주입할 방법이 없기때문에 Autowired로 의존관계 주입
+@Component//컴포넌트 스캔으로 자동으로 빈에 등록하면 의존관계를 주입할 방법이 없기때문에 Autowired로 의존관계 주입`
 public class MemberServiceImpl implements MemberService {
     //구현체가 하나밖에 없을경우 Impl을 붙이는게 관례
     private final MemberRepository memberRepository;

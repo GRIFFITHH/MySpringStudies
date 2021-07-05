@@ -33,7 +33,7 @@ public class OrderServiceTest {
 //        System.out.println(order);
 //        System.out.println(order.calculatePrice()); // 테스트에선 검증을 Assertions으로 한다.
 
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1500);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
 
 }

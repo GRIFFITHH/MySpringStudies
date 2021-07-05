@@ -33,6 +33,7 @@ public class AppConfig {//나의 애플리케이션의 전반적인 구성과 �
     public OrderService orderService(){ // 오더서비스에 저장소와 할인정책을 주입시켜준다.
         System.out.println("Call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+
     }
 
     @Bean
