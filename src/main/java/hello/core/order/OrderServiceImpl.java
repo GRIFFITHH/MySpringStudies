@@ -29,8 +29,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired //Autowired를 통해 생성자에 memberRepository와 discountPolicy 주입 생성자가 하나면 생략 가능
     public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {//@Main- 어노테이션붙은놈이 옴
-        System.out.println(memberRepository);
-        System.out.println(discountPolicy);
+//        System.out.println(memberRepository);
+//        System.out.println(discountPolicy);
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     } // lombok 애노테이션 @RequiredArgsConstructor 으로 인하여 실직 ㅠ

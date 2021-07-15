@@ -8,7 +8,7 @@ import java.util.Map;
 @Component
 public class MemoryMemberRepository implements MemberRepository {
 
-    private static Map<Long, Member> store = new HashMap<>();
+    private Map<Long, Member> store = new HashMap<>();
     //참고 : 실무에선 동시성이슈가 있을수있어 ConcurrentHashMap사용
     //key 와 value, long-> id value는 멤버타입(id,name,grade)
     @Override

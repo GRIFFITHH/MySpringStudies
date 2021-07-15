@@ -20,7 +20,7 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public void join(Member member) {
-    memberRepository.save(member);//new MemoryMemberRepository()에서 가져온 메서드
+        memberRepository.save(member);//new MemoryMemberRepository()에서 가져온 메서드
     }
 
     @Override

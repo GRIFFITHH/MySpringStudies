@@ -1,6 +1,6 @@
 package hello.core.autowired;
 
-import hello.core.AutoAppConfig;
+
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
@@ -17,7 +17,7 @@ public class AllbeanTest {
 
     @Test
     void findAllBean() {
-        ApplicationContext ac =  new AnnotationConfigApplicationContext(AutoAppConfig.class,DiscountService.class);
+        ApplicationContext ac =  new AnnotationConfigApplicationContext(DiscountService.class);
 
         DiscountService discountService = ac.getBean(DiscountService.class);
         Member member = new Member(1L, "userA", Grade.VIP);
