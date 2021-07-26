@@ -1,7 +1,9 @@
 package hello.core;
 
+import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import hello.core.order.Order;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,8 +11,8 @@ import org.springframework.context.annotation.FilterType;
 
 @Configuration
 @ComponentScan(
-//        basePackages = "hello.core.member", //member내부만 조회함!
-        excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION , classes = Configuration.class)
+
+        basePackageClasses = {Member.class , Order.class}
 
 )
 public class AutoAppConfig {

@@ -17,10 +17,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {//나의 애플리케이션의 전반적인 구성과 설정을 책임!
 
-    @Bean // @Bean으로 인하여 스프링 컨테이너에 소속됨
-    public MemberService memberService(){ //
-        return new MemberServiceImpl(memberRepository()); //
-    }
+//    @Bean // @Bean으로 인하여 스프링 컨테이너에 소속됨
+//    public MemberService memberService(){ //
+//        //return new MemberServiceImpl(memberRepository()); //
+//    }
 
     @Bean
     public MemberRepository memberRepository() {

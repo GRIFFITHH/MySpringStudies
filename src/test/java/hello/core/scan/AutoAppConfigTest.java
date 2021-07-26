@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.nio.channels.MembershipKey;
+//import java.nio.channels.MembershipKey;
 
 public class AutoAppConfigTest {
 
