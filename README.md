@@ -9,3 +9,5 @@
  * [싱글톤(스프링) 컨테이너.pdf](https://github.com/GRIFFITHH/core/files/6883196/default.pdf)
 
  * [컴포넌트 스캔과 자동 의존 관계 주입.pdf](https://github.com/GRIFFITHH/core/files/6883188/_._._._._.pdf)
+
+ * [빈의_생명주기.pdf](https://github.com/GRIFFITHH/MySpringStudies/files/6912836/_.pdf)
