@@ -5,7 +5,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
 
 public class BeanLifeCycleTest {
 
@@ -14,16 +16,18 @@ public class BeanLifeCycleTest {
         ConfigurableApplicationContext ac = new AnnotationConfigApplicationContext(LifeCycleConfig.class);
         NetworkClient client = ac.getBean(NetworkClient.class);
 
+
         ac.close();
     }
 
-    @Configuration
+
+    //@ComponentScan
     static class LifeCycleConfig {
-        @Bean
+        //@Bean(initMethod = "init",destroyMethod = "close")
         public NetworkClient networkClient() {
             NetworkClient networkClient = new NetworkClient();
-            networkClient.setUrl("http://hello-spring.dev");
+            networkClient.setUrl("http://hello-spring.dev");//빈을 생성하고
             return networkClient;
-        }
+        } //주석처리
     }
 }
